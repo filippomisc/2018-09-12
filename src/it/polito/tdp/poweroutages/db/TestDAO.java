@@ -6,7 +6,11 @@ public class TestDAO {
 
 		PowerOutagesDAO dao = new PowerOutagesDAO();
 
-		System.out.println(dao.loadAllNercs());
+		NercIdMap  nercIdMap= new NercIdMap();
+		
+		System.out.println(dao.loadAllNercs(nercIdMap).size());
+		
+		System.out.println(dao.loadAdiacenze(nercIdMap).size());
 	}
 
 }
